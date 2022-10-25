@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class BookController {
     @Autowired
@@ -34,5 +36,11 @@ else{
         BookDTO findResult =bookService.findBook();
         model.addAttribute("book",findResult);
         return "findBook";
+    }
+    @GetMapping("/books")
+    public String  findAll(Model model){
+        List<BookDTO> bookList = bookService.findAll();
+        model.addAttribute("bookList",bookList);
+        return "bookList";
     }
 }

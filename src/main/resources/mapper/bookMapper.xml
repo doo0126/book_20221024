@@ -12,5 +12,9 @@
     <select id ="findBook" resultType="DTO">
         select * from book_table where id='2'
     </select>
+    <select id ="findAll" resultType="DTO">
+        select * from book_table
+    </select>
+
 
 </mapper>
