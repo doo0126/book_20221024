@@ -19,4 +19,8 @@ public class BookService {
         return false;
     }
     }
+
+    public BookDTO findBook() {
+       return   bookRepository.findBook();
+    }
 }

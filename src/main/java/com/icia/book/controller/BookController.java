@@ -28,4 +28,11 @@ else{
     return "false";
 }
     }
+
+    @GetMapping("/findBook")
+    public String findBook(Model model){
+        BookDTO findResult =bookService.findBook();
+        model.addAttribute("book",findResult);
+        return "findBook";
+    }
 }

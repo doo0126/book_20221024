@@ -8,7 +8,7 @@ import lombok.*;
 @Setter
 @ToString
 public class BookDTO {
-
+    private long id;
     private String bookName = "";
     private String bookAuthor = "";
     private String bookPrice = "";

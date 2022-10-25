@@ -17,4 +17,7 @@ public int save(BookDTO bookDTO){
 
 }
 
+    public BookDTO findBook() {
+        return sql.selectOne("book.findBook");
+    }
 }
